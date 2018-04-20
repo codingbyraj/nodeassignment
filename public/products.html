@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>E-Kart - Products Page</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -14,35 +14,40 @@
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">E-Shopping</a>
-                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">E-Shopping</a>
+                        </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="index.html">Add Product
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Products</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="cart.html">Cart</a>
-                        </li>
-                    </ul>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+                                    <a href="index.html">Add Product
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Products</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li>
+                                    <a href="cart.html">Cart</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -54,7 +59,7 @@
                     <h1>All Products</h1>
                     <div class="shopping-system clearfix">
                         <select name="" id="vendor" v-model="vendorForFilter" v-on:change="getProductsByVendor()">
-                            <option value="" selected>Select Vendor</option>
+                            <option value="" selected>Search by Vendor</option>
                             <option v-bind:value="vendor.id" v-for="vendor in vendors">{{vendor.name}}</option>
                         </select>
                     </div>

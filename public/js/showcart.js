@@ -22,6 +22,7 @@ let app = new Vue({
             axios.get('/api/product/showcart')
             .then((res)=>{                
                 app.cartItems = res.data.cartItems;
+                app.sum = 0;
                 for(let i in app.cartItems){
                     app.sum = parseInt(app.sum) + parseInt(app.cartItems[i].quantity) * 
                     parseInt(app.cartItems[i].product.price)
